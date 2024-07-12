@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A4 Container</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#313c4e",
+              secondary: "#666766",
+              tertiary: "##7c7c7c",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* Custom class for A4 size */
+      .a4-container {
+        width: 210mm;
+        height: 297mm;
+      }
+
+      @media print {
+        .a4-container {
+          box-shadow: none;
+          margin: 0;
+          width: 100%;
+          height: 100%;
+          page-break-after: always;
+        }
+      }
+
+      * {
+        font-family: "Ubuntu", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="flex items-center justify-center h-screen bg-gray-100">
+    <div class="a4-container bg-white shadow-lg py-10">
+      <!-- INTRODUCTION -->
+      <section class="px-10">
+        <h1 class="font-bold">Alex Hek</h1>
+        <h2>Fullstack Developer & AI Solutions Expert</h2>
+        <p>
+          Full Stack Developer and AI enthusiast in search of exciting
+          opportunities, keen to embrace emerging technologies and make a
+          significant impact on a meaningful company mission.
+        </p>
+      </section>
+      <!-- /INTRODUCTION -->
+
+      <!-- LINKS -->
+      <section class="flex justify-center border-y-2 border-black">
+        <div>
+          <img src="/email.svg" alt="SVG Image" />
+        </div>
+        <div>
+          <img src="/phone.svg" alt="SVG Image" />
+        </div>
+        <div>
+          <img src="/location.svg" alt="SVG Image" />
+        </div>
+      </section>
+      <!-- /LINKS -->
+
+      <section class="h-full flex justify-center">
+        <div class="w-1/2 bg-blue-700">
+          <h2>WORK EXPERIENCE</h2>
+          <h3>Senior Developer & Team Lead</h3>
+        </div>
+        <div class="w-1/2 bg-red-700">
+          <h2>LANGUAGES & TECHNOLOGIES</h2>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
