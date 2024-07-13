@@ -16,10 +16,23 @@
         theme: {
           extend: {
             colors: {
-              primary: "#313c4e",
-              secondary: "#666766",
-              tertiary: "##7c7c7c",
+              colourOne: "#313c4e",
+              colourTwo: "#666766",
+              colourThree: "#7c7c7c",
+              colourFour: "#000000",
+              colourFive: "#989DA6",
+              colourSix: "#b2b2b2",
             },
+          },
+          fontFamily: {
+            sans: ["Ubuntu", "sans-serif"],
+          },
+          fontSize: {
+            xs: ["10px", "12px"],
+            sm: ["12px", "16px"],
+            lg: ["16px", "20px"],
+            xl: ["19px", "24px"],
+            "2xl": ["32px", "32px"],
           },
         },
       };
@@ -41,19 +54,17 @@
           page-break-after: always;
         }
       }
-
-      * {
-        font-family: "Ubuntu", sans-serif;
-      }
     </style>
   </head>
-  <body class="flex items-center justify-center h-screen bg-gray-100">
-    <div class="a4-container bg-white shadow-lg py-10">
+  <body class="flex items-center ml-1 justify-center h-screen bg-gray-100">
+    <div class="a4-container bg-white shadow-lg py-6">
       <!-- INTRODUCTION -->
-      <section class="px-10">
-        <h1 class="font-bold">Alex Hek</h1>
-        <h2>Fullstack Developer & AI Solutions Expert</h2>
-        <p>
+      <section class="px-8">
+        <h1 class="font-bold text-2xl text-colourOne">Alex Hek</h1>
+        <h2 class="text-lg text-colourTwo py-0.5">
+          Full Stack Developer & AI Solutions Expert
+        </h2>
+        <p class="text-sm pb-5 pt-1">
           Full Stack Developer and AI enthusiast in search of exciting
           opportunities, keen to embrace emerging technologies and make a
           significant impact on a meaningful company mission.
@@ -62,28 +73,306 @@
       <!-- /INTRODUCTION -->
 
       <!-- LINKS -->
-      <section class="flex justify-center border-y-2 border-black">
-        <div>
-          <img src="/email.svg" alt="SVG Image" />
+      <section
+        class="grid grid-cols-3 gap-1 border-y-2 border-black px-8 py-2 text-sm"
+      >
+        <a class="flex" target="_blank" href="mailto:alexanderhek@gmail.com">
+          <img class="w-7" src="/email.svg" alt="Email" />
+          <p class="flex items-center ml-1">alexanderhek@gmail.com</p>
+        </a>
+        <div class="flex">
+          <img class="w-7" src="/phone.svg" alt="Phone" />
+          <p class="flex items-center ml-1">+447874982110</p>
         </div>
-        <div>
-          <img src="/phone.svg" alt="SVG Image" />
+        <div class="flex">
+          <img class="w-7" src="/location.svg" alt="Location" />
+          <p class="flex items-center ml-1">Newcastle upon Tyne, UK</p>
         </div>
-        <div>
-          <img src="/location.svg" alt="SVG Image" />
-        </div>
+        <a
+          class="flex"
+          target="_blank"
+          href="https://www.linkedin.com/in/alex-hek/"
+        >
+          <img class="w-7" src="/linkedin.svg" alt="LinkedIn" />
+          <p class="flex items-center ml-1">linkedin.com/in/alex-hek</p>
+        </a>
+        <a class="flex" target="_blank" href="https://github.com/Hekmundo">
+          <img class="w-7" src="/github.svg" alt="Github" />
+          <p class="flex items-center ml-1">github.com/Hekmundo</p>
+        </a>
+        <a class="flex" target="_blank" href="https://alexhek.com">
+          <img class="w-7" src="/website.svg" alt="Website" />
+          <p class="flex items-center ml-1">alexhek.com</p>
+        </a>
       </section>
       <!-- /LINKS -->
 
-      <section class="h-full flex justify-center">
-        <div class="w-1/2 bg-blue-700">
-          <h2>WORK EXPERIENCE</h2>
-          <h3>Senior Developer & Team Lead</h3>
+      <div class="h-full flex justify-center px-8">
+        <div class="w-1/2 pr-4">
+          <!-- WORK EXPERIENCE -->
+          <section>
+            <h2 class="text-xl font-bold capitalize text-colourOne pt-3 pb-2">
+              WORK EXPERIENCE
+            </h2>
+            <h3 class="text-lg font-bold">Senior Developer & Team Lead</h3>
+            <h4 class="text-lg">The Developing Leaders Partnership</h4>
+            <p class="text-xs pt-1 text-colourTwo">08/2021 - Present</p>
+            <p class="text-xs text-colourThree py-1 italic">
+              Trading as Gyre (Digital platform for enhancing team performance)
+              and Text Alchemy (AI consultancy and AI software solutions)
+            </p>
+            <h5 class="text-xs text-colourTwo pb-0.5">Achievements/Tasks</h5>
+            <ul class="text-sm list-disc ml-3.5 flex flex-col gap-1">
+              <li>
+                Team Lead for Gyre's 'Product' and 'Tech' team. Led team
+                development while working with agile methodologies.
+              </li>
+              <li>
+                Led and delivered AI software contracts for clients of Text
+                Alchemy. Building custom software that makes use of the latest
+                LLM's and bespoke UI.
+              </li>
+              <li>
+                Directed the development and successful delivery of the
+                AI-powered 'Goal Capture' feature for Gyre, facilitating users
+                in setting, refining, and analysing their goals.
+              </li>
+              <li>
+                Delivered software using TypeScript, Vue.js, .NET, SQL, C#,
+                Node.js, Prismic CMS, Azure Cloud Services, Cypress, and Jira.
+              </li>
+              <li>
+                Designed comprehensive SQL and NoSQL databases, incorporating
+                caching systems, notification systems, event logging, EF
+                migrations, and data warehouse synchronisation.
+              </li>
+              <li>
+                Successfully managed integrations with various platforms,
+                including CMS (Prismic), CRM (Copper), Data Analytics (Sherlock,
+                Mixpanel), billing services (Stripe, Chargebee), collaboration
+                tools (Slack, MS Teams), and email services (SendGrid,
+                Mailchimp).
+              </li>
+              <li>Overseen platform wide migration from Vue 2 to Vue 3.</li>
+            </ul>
+            <p class="text-xs text-colourTwo pt-2 pb-4 italic">
+              Contact:
+              <span class="text-black ml-0.5">
+                Mark Loftus
+                <span class="px-0.5">-</span> mark.loftus@gyreteams.com</span
+              >
+            </p>
+
+            <h3 class="text-lg font-bold">Musician</h3>
+            <h4 class="text-lg">Alex Hek Music</h4>
+            <p class="text-xs py-1 text-colourTwo">03/2017 - 08/2021</p>
+            <h5 class="text-xs text-colourTwo pb-0.5">Achievements/Tasks</h5>
+            <ul class="text-sm list-disc ml-3.5 flex flex-col gap-1">
+              <li>
+                10 million Spotify streams and 100,000 monthly listeners with
+                ‘October Ends’.
+              </li>
+              <li>
+                Performed as a guitarist/singer at 100's of events across the
+                UK.
+              </li>
+              <li>
+                Teaching music 3 days per week at institutions including North
+                Music Trust and Berwick Academy.
+              </li>
+            </ul>
+            <p class="text-xs text-colourTwo pt-2 italic">
+              Contact:
+              <span class="text-black ml-0.5"
+                >Darren Holleywell
+                <span class="px-0.5">-</span>
+                holleywelld@berwickacademy.co.uk</span
+              >
+            </p>
+          </section>
+          <!-- /WORK EXPERIENCE -->
         </div>
-        <div class="w-1/2 bg-red-700">
-          <h2>LANGUAGES & TECHNOLOGIES</h2>
+
+        <div class="w-1/2 pl-5">
+          <!-- LANGUAGES & TECHNOLOGIES -->
+          <section>
+            <h2 class="text-xl font-bold capitalize text-colourOne pt-3 pb-2">
+              LANGUAGES & TECHNOLOGIES
+            </h2>
+            <ul class="text-sm flex flex-wrap gap-2">
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                TypeScript/JavaScript
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                Python
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                React
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">Vue</li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                Redux
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                NodeJS
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                ExpressJS
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                ThreeJS
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                CSS/SASS/Tailwind
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                C#/ASP.NET
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                Azure
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">SQL</li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                NoSQL
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                BigQuery
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                Git & CI/CD
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">Jira</li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                Prismic CMS
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                Mixpanel
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                Cypress
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                Storybook
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                LLM APIs
+              </li>
+              <li class="bg-colourFive text-white py-1 px-2.5 rounded">
+                Rest APIs
+              </li>
+            </ul>
+          </section>
+          <!-- /LANGUAGES & TECHNOLOGIES -->
+
+          <!-- EDUCATION -->
+          <section class="pt-5">
+            <h2 class="text-xl font-bold capitalize text-colourOne py-2 pt-3">
+              EDUCATION
+            </h2>
+            <h3 class="text-lg font-bold">Bachelor of Music</h3>
+            <h4 class="text-lg">University of Sunderland</h4>
+            <div class="text-xs py-1 text-colourTwo flex justify-between">
+              <p>09/2016 - 02/2020</p>
+              <p>First Class Honours</p>
+            </div>
+            <h5 class="text-xs text-colourTwo pb-0.5">Achievements</h5>
+            <ul class="text-sm list-disc ml-3.5 flex flex-col gap-1">
+              <li>Finished top of my year group.</li>
+            </ul>
+
+            <h3 class="text-lg pt-3 font-bold">
+              BTEC Level 3 Extended Diploma in Music
+            </h3>
+            <h4 class="text-lg">Newcastle College</h4>
+            <div class="text-xs pt-1 text-colourTwo flex justify-between">
+              <p>09/2011 - 06/2013</p>
+              <p>Triple Grade A* A A*</p>
+            </div>
+          </section>
+          <!-- /EDUCATION -->
+
+          <!-- CERTIFICATES -->
+          <section class="pt-5">
+            <h2 class="text-xl font-bold capitalize text-colourOne py-2">
+              CERTIFICATES
+            </h2>
+            <ul class="text-sm flex flex-col gap-1">
+              <li>
+                <p>The Complete Web Developer in 2021</p>
+                <div class="flex justify-between text-xs text-colourThree">
+                  <p>Zero To Mastery Academy</p>
+                  <p>04/2021</p>
+                </div>
+              </li>
+              <li>
+                <p>Learn SQL Course</p>
+                <div class="flex justify-between text-xs text-colourThree">
+                  <p>Codeacademy</p>
+                  <p>03/2021</p>
+                </div>
+              </li>
+              <li>
+                <p>Learn Python 3 Course</p>
+                <div class="flex justify-between text-xs text-colourThree">
+                  <p>Codeacademy</p>
+                  <p>08/2020</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <!-- /CERTIFICATES -->
+
+          <!-- INTERESTS -->
+          <section class="pt-5">
+            <h2 class="text-xl font-bold capitalize text-colourOne py-2">
+              INTERESTS
+            </h2>
+            <ul class="flex flex-wrap gap-2 text-sm">
+              <li
+                class="border-colourSix border-solid border-[1px] py-1 px-3 rounded"
+              >
+                AI
+              </li>
+              <li
+                class="border-colourSix border-solid border-[1px] py-1 px-3 rounded"
+              >
+                Travel
+              </li>
+              <li
+                class="border-colourSix border-solid border-[1px] py-1 px-3 rounded"
+              >
+                Music Production
+              </li>
+              <li
+                class="border-colourSix border-solid border-[1px] py-1 px-3 rounded"
+              >
+                Video Creation
+              </li>
+              <li
+                class="border-colourSix border-solid border-[1px] py-1 px-3 rounded"
+              >
+                Powerlifting
+              </li>
+              <li
+                class="border-colourSix border-solid border-[1px] py-1 px-3 rounded"
+              >
+                Concerts
+              </li>
+              <li
+                class="border-colourSix border-solid border-[1px] py-1 px-3 rounded"
+              >
+                Guitar
+              </li>
+              <li
+                class="border-colourSix border-solid border-[1px] py-1 px-3 rounded"
+              >
+                Cold water swimming
+              </li>
+            </ul>
+          </section>
+          <!-- /INTERESTS -->
         </div>
-      </section>
+      </div>
     </div>
   </body>
 </html>
